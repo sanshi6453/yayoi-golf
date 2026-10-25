@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <title>やよい会グランドゴルフ月例会 成績結果メール送信用</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:17px;color:#edf4ff;background:#09162e}
 *{box-sizing:border-box}body{margin:0;padding:18px 12px 32px}.wrap{max-width:800px;margin:0 auto}
-a[x-apple-data-detectors]{color:#e8f1ff!important;text-decoration:underline!important}h1{font-size:clamp(1.05rem,4.4vw,1.35rem);line-height:1.45;letter-spacing:.025em;margin:0 0 10px;color:#fff;font-weight:750;text-align:center}h1 span{display:block;color:#d8e6fb;font-size:.88em;font-weight:650;margin-top:2px}.lead{margin:0 0 16px;color:#c4d3eb;line-height:1.6}
+.phone-example{color:#fff;font-weight:800;text-decoration:underline;text-decoration-color:#9ed8ff;text-decoration-thickness:2px}h1{font-size:clamp(1.05rem,4.4vw,1.35rem);line-height:1.45;letter-spacing:.025em;margin:0 0 10px;color:#fff;font-weight:750;text-align:center}h1 span{display:block;color:#d8e6fb;font-size:.88em;font-weight:650;margin-top:2px}.lead{margin:0 0 16px;color:#c4d3eb;line-height:1.6}
 .panel{background:#10254a;border:1px solid #294a78;border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 4px 16px #00000026}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}.field{min-width:0}.field label{display:block;font-weight:700;font-size:.92rem;margin:0 0 6px;color:#edf4ff}.field input{display:block;width:100%;min-width:0;max-width:100%;min-height:54px;padding:12px;border:1px solid #8ca6ca;border-radius:8px;background:#f8fbff;font:inherit;font-size:1.05rem;color:#17243a}
 #date{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;-webkit-appearance:none;appearance:none}#date::-webkit-calendar-picker-indicator{opacity:1}fieldset{border:1px solid #355783;border-radius:10px;margin:15px 0 0;padding:12px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.female{background:#704658;border-color:#a9788d}.female legend,.female .field label{color:#fff}.female .field input{border-color:#d7b7c4}legend{font-weight:700;padding:0 7px;color:#fff}.rank-fields{display:grid;gap:10px}
@@ -34,7 +35,7 @@ a[x-apple-data-detectors]{color:#e8f1ff!important;text-decoration:underline!impo
 <div class="field"><label for="f3">3位</label><input id="f3" autocomplete="off" required></div>
 </div></fieldset>
 </div>
-<div class="field" style="margin-top:14px"><label for="phone">連絡先電話番号（ハイフンなしで入力）</label><input id="phone" type="tel" inputmode="numeric" autocomplete="off" maxlength="13" placeholder="電話番号を入力" required><p class="note" style="margin-top:6px">入力例（中日新聞四日市支局）：<strong>0593523108</strong> と入力 → <strong>059-352-3108</strong> と表示<br>ご自宅の番号を、ハイフンなしの数字10桁で入力してください。</p></div>
+<div class="field" style="margin-top:14px"><label for="phone">連絡先電話番号（ハイフンなしで入力）</label><input id="phone" type="tel" inputmode="numeric" autocomplete="off" maxlength="13" placeholder="電話番号を入力" required><p class="note" style="margin-top:6px">入力例（中日新聞四日市支局）：<span class="phone-example">0593523108</span> と入力 → <strong>059-352-3108</strong> と表示<br>ご自宅の番号を、ハイフンなしの数字10桁で入力してください。</p></div>
 <p class="note">送信先：mie-s@chunichi.co.jp（中日新聞 スポーツ三重 係）</p>
 </section>
 <section class="panel" aria-label="作成されたメール">
