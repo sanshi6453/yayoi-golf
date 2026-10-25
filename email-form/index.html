@@ -7,10 +7,10 @@
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:17px;color:#edf4ff;background:#09162e}
 *{box-sizing:border-box}body{margin:0;padding:18px 12px 32px}.wrap{max-width:800px;margin:0 auto}
-h1{font-size:1.3rem;margin:0 0 7px;color:#fff}.lead{margin:0 0 16px;color:#c4d3eb;line-height:1.6}
+h1{font-size:clamp(1.05rem,4.4vw,1.35rem);line-height:1.45;letter-spacing:.025em;margin:0 0 10px;color:#fff;font-weight:750;text-align:center}h1 span{display:block;color:#d8e6fb;font-size:.88em;font-weight:650;margin-top:2px}.lead{margin:0 0 16px;color:#c4d3eb;line-height:1.6}
 .panel{background:#10254a;border:1px solid #294a78;border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 4px 16px #00000026}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}.field label{display:block;font-weight:700;font-size:.92rem;margin:0 0 6px;color:#edf4ff}.field input{width:100%;min-height:54px;padding:12px;border:1px solid #8ca6ca;border-radius:8px;background:#f8fbff;font:inherit;font-size:1.05rem;color:#17243a}
-fieldset{border:1px solid #355783;border-radius:10px;margin:15px 0 0;padding:12px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}legend{font-weight:700;padding:0 7px;color:#fff}.rank-fields{display:grid;gap:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}.field{min-width:0}.field label{display:block;font-weight:700;font-size:.92rem;margin:0 0 6px;color:#edf4ff}.field input{display:block;width:100%;min-width:0;max-width:100%;min-height:54px;padding:12px;border:1px solid #8ca6ca;border-radius:8px;background:#f8fbff;font:inherit;font-size:1.05rem;color:#17243a}
+fieldset{border:1px solid #355783;border-radius:10px;margin:15px 0 0;padding:12px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}.female{background:#704658;border-color:#a9788d}.female legend,.female .field label{color:#fff}.female .field input{border-color:#d7b7c4}legend{font-weight:700;padding:0 7px;color:#fff}.rank-fields{display:grid;gap:10px}
 .output-label{font-weight:700;display:block;margin:0 0 6px;color:#fff}.subject{font-weight:600}.output{width:100%;min-height:250px;resize:vertical;padding:12px;border:1px solid #8ca6ca;border-radius:8px;background:#f8fbff;color:#17243a;font:inherit;line-height:1.65;white-space:pre-wrap}.subject.output{min-height:48px;resize:none}
 .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.actions button{min-height:54px;border:0;border-radius:9px;padding:12px 16px;font:inherit;font-size:1rem;font-weight:700;cursor:pointer}.primary{background:#2764c5;color:#fff}.secondary{background:#dce8f8;color:#10254a}.actions button:disabled{opacity:.5;cursor:not-allowed}.status{margin:10px 0 0;min-height:1.4em;color:#d4e2f6;font-size:.92rem}.note{font-size:.88rem;color:#c4d3eb;line-height:1.6;margin:12px 0 0}
 @media(max-width:580px){body{padding:13px 9px 24px}.panel{padding:13px}.grid,.columns{grid-template-columns:1fr}.actions button{width:100%}.output{font-size:.96rem}}
@@ -18,8 +18,8 @@ fieldset{border:1px solid #355783;border-radius:10px;margin:15px 0 0;padding:12p
 </head>
 <body>
 <main class="wrap">
-<h1>やよい会グランドゴルフ月例会 成績結果メール送信用</h1>
-<p class="lead">開催日・連絡先電話番号・入賞者を入力してください。件名・本文を作成し、メールアプリに宛先も入れます。</p>
+<h1>やよい会グランドゴルフ月例会<span>成績結果メール送信用</span></h1>
+<p class="lead">開催日・連絡先電話番号・入賞者を入力してください。<br>件名・本文を作成し、メールアプリに宛先も入れます。</p>
 <section class="panel" aria-label="開催日と入賞者の入力">
 <div class="field"><label for="date">開催日</label><input id="date" type="date" required></div>
 <div class="columns">
@@ -28,7 +28,7 @@ fieldset{border:1px solid #355783;border-radius:10px;margin:15px 0 0;padding:12p
 <div class="field"><label for="m2">2位</label><input id="m2" autocomplete="off" required></div>
 <div class="field"><label for="m3">3位</label><input id="m3" autocomplete="off" required></div>
 </div></fieldset>
-<fieldset><legend>女子</legend><div class="rank-fields">
+<fieldset class="female"><legend>女子</legend><div class="rank-fields">
 <div class="field"><label for="f1">1位</label><input id="f1" autocomplete="off" required></div>
 <div class="field"><label for="f2">2位</label><input id="f2" autocomplete="off" required></div>
 <div class="field"><label for="f3">3位</label><input id="f3" autocomplete="off" required></div>
